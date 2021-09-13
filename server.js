@@ -26,7 +26,7 @@ const userSchema = new mongoose.Schema({
 
 });
 
-const Student = mongoose.model("student", userSchema);
+const student = mongoose.model("student", userSchema);
 app.use(express.json);
 app.post("/student", async(req, res)=>{
     const student = await Student.create(req.body);
